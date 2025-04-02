@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\DemoProject\\DemoShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D02E466-16E5-46F5-A91A-DDB475E300D1}|eCommerceapp.Host\\eCommerceapp.Host.csproj|d:\\demoproject\\demoshop\\ecommerceapp.host\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D02E466-16E5-46F5-A91A-DDB475E300D1}|eCommerceapp.Host\\eCommerceapp.Host.csproj|solutionrelative:ecommerceapp.host\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{947A0F8E-EC09-4C71-B434-FC1F9C5C202F}|eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj|d:\\demoproject\\demoshop\\ecommerceapp.infastructrur\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{947A0F8E-EC09-4C71-B434-FC1F9C5C202F}|eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj|solutionrelative:ecommerceapp.infastructrur\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A45068AD-C4EB-4568-823A-67DDCB7F01D7}|eCommerceApp.Domain\\eCommerceApp.Domain.csproj|d:\\demoproject\\demoshop\\ecommerceapp.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A45068AD-C4EB-4568-823A-67DDCB7F01D7}|eCommerceApp.Domain\\eCommerceApp.Domain.csproj|solutionrelative:ecommerceapp.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{947A0F8E-EC09-4C71-B434-FC1F9C5C202F}|eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj|d:\\demoproject\\demoshop\\ecommerceapp.infastructrur\\ecommerceapp.infastructrur.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{947A0F8E-EC09-4C71-B434-FC1F9C5C202F}|eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj|solutionrelative:ecommerceapp.infastructrur\\ecommerceapp.infastructrur.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceapp.Host\\Class1.cs",
-              "RelativeDocumentMoniker": "eCommerceapp.Host\\Class1.cs",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceapp.Host\\Class1.cs",
-              "RelativeToolTip": "eCommerceapp.Host\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T06:09:26.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceApp.Infastructrur\\Class1.cs",
-              "RelativeDocumentMoniker": "eCommerceApp.Infastructrur\\Class1.cs",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceApp.Infastructrur\\Class1.cs",
-              "RelativeToolTip": "eCommerceApp.Infastructrur\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T06:09:01.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceApp.Domain\\Class1.cs",
-              "RelativeDocumentMoniker": "eCommerceApp.Domain\\Class1.cs",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceApp.Domain\\Class1.cs",
-              "RelativeToolTip": "eCommerceApp.Domain\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T06:08:16.353Z",
+              "Title": "eCommerceApp.Infastructrur",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
+              "RelativeDocumentMoniker": "eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
+              "RelativeToolTip": "eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-12T06:12:34.92Z",
               "EditorCaption": ""
             }
           ]

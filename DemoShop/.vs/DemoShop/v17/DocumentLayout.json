@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "D:\\DemoProject\\DemoShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{947A0F8E-EC09-4C71-B434-FC1F9C5C202F}|eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj|d:\\demoproject\\demoshop\\ecommerceapp.infastructrur\\ecommerceapp.infastructrur.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{947A0F8E-EC09-4C71-B434-FC1F9C5C202F}|eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj|solutionrelative:ecommerceapp.infastructrur\\ecommerceapp.infastructrur.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{9AABED00-2E68-4A6A-AD16-6688062F1A2D}|eCommerceApp.Hosts\\eCommerceApp.Hosts.csproj|d:\\demoproject\\demoshop\\ecommerceapp.hosts\\repository\\imanageaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AABED00-2E68-4A6A-AD16-6688062F1A2D}|eCommerceApp.Hosts\\eCommerceApp.Hosts.csproj|solutionrelative:ecommerceapp.hosts\\repository\\imanageaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABED00-2E68-4A6A-AD16-6688062F1A2D}|eCommerceApp.Hosts\\eCommerceApp.Hosts.csproj|d:\\demoproject\\demoshop\\ecommerceapp.hosts\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AABED00-2E68-4A6A-AD16-6688062F1A2D}|eCommerceApp.Hosts\\eCommerceApp.Hosts.csproj|solutionrelative:ecommerceapp.hosts\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABED00-2E68-4A6A-AD16-6688062F1A2D}|eCommerceApp.Hosts\\eCommerceApp.Hosts.csproj|d:\\demoproject\\demoshop\\ecommerceapp.hosts\\repository\\manageaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AABED00-2E68-4A6A-AD16-6688062F1A2D}|eCommerceApp.Hosts\\eCommerceApp.Hosts.csproj|solutionrelative:ecommerceapp.hosts\\repository\\manageaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABED00-2E68-4A6A-AD16-6688062F1A2D}|eCommerceApp.Hosts\\eCommerceApp.Hosts.csproj|d:\\demoproject\\demoshop\\ecommerceapp.hosts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AABED00-2E68-4A6A-AD16-6688062F1A2D}|eCommerceApp.Hosts\\eCommerceApp.Hosts.csproj|solutionrelative:ecommerceapp.hosts\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceApp.Hosts\\Program.cs",
+              "RelativeDocumentMoniker": "eCommerceApp.Hosts\\Program.cs",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceApp.Hosts\\Program.cs",
+              "RelativeToolTip": "eCommerceApp.Hosts\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T16:35:47.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceApp.Hosts\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "eCommerceApp.Hosts\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceApp.Hosts\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "eCommerceApp.Hosts\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T16:33:56.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "eCommerceApp.Infastructrur",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
-              "RelativeDocumentMoniker": "eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
-              "RelativeToolTip": "eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-12T06:12:34.92Z",
+              "Title": "IManageAccount.cs",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceApp.Hosts\\Repository\\IManageAccount.cs",
+              "RelativeDocumentMoniker": "eCommerceApp.Hosts\\Repository\\IManageAccount.cs",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceApp.Hosts\\Repository\\IManageAccount.cs",
+              "RelativeToolTip": "eCommerceApp.Hosts\\Repository\\IManageAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T16:32:44.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManageAccount.cs",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceApp.Hosts\\Repository\\ManageAccount.cs",
+              "RelativeDocumentMoniker": "eCommerceApp.Hosts\\Repository\\ManageAccount.cs",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceApp.Hosts\\Repository\\ManageAccount.cs",
+              "RelativeToolTip": "eCommerceApp.Hosts\\Repository\\ManageAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T16:32:27.278Z",
               "EditorCaption": ""
             }
           ]
