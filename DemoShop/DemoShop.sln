@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerceApp.Hosts", "eCommerceApp.Hosts\eCommerceApp.Hosts.csproj", "{9AABED00-2E68-4A6A-AD16-6688062F1A2D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATN01", "DATN01\DATN01.csproj", "{DDF57424-E160-4C22-919E-B852B361733D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopInfrastructor", "ShopInfrastructor\ShopInfrastructor.csproj", "{399C54BE-5AC0-4D5D-8C5A-DBEC3D54D9C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9AABED00-2E68-4A6A-AD16-6688062F1A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9AABED00-2E68-4A6A-AD16-6688062F1A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9AABED00-2E68-4A6A-AD16-6688062F1A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9AABED00-2E68-4A6A-AD16-6688062F1A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDF57424-E160-4C22-919E-B852B361733D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF57424-E160-4C22-919E-B852B361733D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDF57424-E160-4C22-919E-B852B361733D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF57424-E160-4C22-919E-B852B361733D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{399C54BE-5AC0-4D5D-8C5A-DBEC3D54D9C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{399C54BE-5AC0-4D5D-8C5A-DBEC3D54D9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{399C54BE-5AC0-4D5D-8C5A-DBEC3D54D9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{399C54BE-5AC0-4D5D-8C5A-DBEC3D54D9C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

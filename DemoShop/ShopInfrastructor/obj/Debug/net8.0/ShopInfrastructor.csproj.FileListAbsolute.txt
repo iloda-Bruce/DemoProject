@@ -1,0 +1,12 @@
+D:\DemoProject\DemoShop\ShopInfrastructor\bin\Debug\net8.0\ShopInfrastructor.deps.json
+D:\DemoProject\DemoShop\ShopInfrastructor\bin\Debug\net8.0\ShopInfrastructor.dll
+D:\DemoProject\DemoShop\ShopInfrastructor\bin\Debug\net8.0\ShopInfrastructor.pdb
+D:\DemoProject\DemoShop\ShopInfrastructor\obj\Debug\net8.0\ShopInfrastructor.GeneratedMSBuildEditorConfig.editorconfig
+D:\DemoProject\DemoShop\ShopInfrastructor\obj\Debug\net8.0\ShopInfrastructor.AssemblyInfoInputs.cache
+D:\DemoProject\DemoShop\ShopInfrastructor\obj\Debug\net8.0\ShopInfrastructor.AssemblyInfo.cs
+D:\DemoProject\DemoShop\ShopInfrastructor\obj\Debug\net8.0\ShopInfrastructor.csproj.CoreCompileInputs.cache
+D:\DemoProject\DemoShop\ShopInfrastructor\obj\Debug\net8.0\ShopInfrastructor.sourcelink.json
+D:\DemoProject\DemoShop\ShopInfrastructor\obj\Debug\net8.0\ShopInfrastructor.dll
+D:\DemoProject\DemoShop\ShopInfrastructor\obj\Debug\net8.0\refint\ShopInfrastructor.dll
+D:\DemoProject\DemoShop\ShopInfrastructor\obj\Debug\net8.0\ShopInfrastructor.pdb
+D:\DemoProject\DemoShop\ShopInfrastructor\obj\Debug\net8.0\ref\ShopInfrastructor.dll

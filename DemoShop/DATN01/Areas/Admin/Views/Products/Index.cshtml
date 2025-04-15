@@ -1,0 +1,411 @@
+﻿@{
+    ViewData["Title"] = "ProductPage";
+    Layout = "_LayoutAdmin";
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 p-3">
+            <h5 class="font-weight-bold">Hàng hóa</h5>
+            <div class="col-12 card">
+                <div class="mt-3 card-body">
+                    <h6>Loại hàng</h6>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="hangHoa">
+                        <label class="form-check-label" for="hangHoa">Hàng hóa</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dichVu">
+                        <label class="form-check-label" for="dichVu">Dịch vụ</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="comboDongGoi">
+                        <label class="form-check-label" for="comboDongGoi">Combo - đóng gói</label>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-12 card">
+                <div class="mt-3 card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6>Nhóm hàng</h6>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="input-group mt-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Tìm kiếm nhóm hàng">
+                    </div>
+                    <div class="mt-2">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="tatCa" checked>
+                            <label class="form-check-label" for="tatCa">Tất cả</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="banChai">
+                            <label class="form-check-label" for="banChai">Bàn chải</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="banhBao">
+                            <label class="form-check-label" for="banhBao">Bánh bao</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="giaVi">
+                            <label class="form-check-label" for="giaVi">Gia vị</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="banhDauXanh">
+                            <label class="form-check-label" for="banhDauXanh">Bánh đậu xanh</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="bangVeSinh">
+                            <label class="form-check-label" for="bangVeSinh">Băng vệ sinh</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 card">
+                <div class="mt-3 card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6>Lọc theo tiêu điểm</h6>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle"><i class="fas fa-caret-up"></i></button>
+                    </div>
+                    <div class="mt-2">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="tieuDiem" id="tatCaTieuDiem" checked>
+                            <label class="form-check-label" for="tatCaTieuDiem">Tất cả</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="tieuDiem" id="tichDiem">
+                            <label class="form-check-label" for="tichDiem">Tích điểm</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="tieuDiem" id="khongTichDiem">
+                            <label class="form-check-label" for="khongTichDiem">Không tích điểm</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 card">
+                <div class="mt-3 card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6>Thuộc tính</h6>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle"><i class="fas fa-caret-up"></i></button>
+                    </div>
+                    <div class="mt-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="thung">
+                            <label class="form-check-label" for="thung">THÙNG</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="moRong">
+                            <label class="form-check-label" for="moRong">Mở rộng</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9 p-3 card">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Theo mã, tên hàng,...">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <button class="btn btn-success mr-2"><i class="fas fa-plus"></i> Thêm mới</button>
+                    <button class="btn btn-info mr-2"><i class="fas fa-upload"></i> Import</button>
+                    <button class="btn btn-warning mr-2"><i class="fas fa-download"></i> Xuất file</button>
+                    <button class="btn btn-light border mr-2"><i class="fas fa-cog"></i></button>
+                    <button class="btn btn-light border"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col"><input type="checkbox"></th>
+                            <th scope="col"><i class="far fa-star"></i></th>
+                            <th scope="col">Mã hàng</th>
+                            <th scope="col">Tên hàng</th>
+                            <th scope="col">Giá bán</th>
+                            <th scope="col">Giá vốn</th>
+                            <th scope="col">Tồn kho</th>
+                            <th scope="col">Khách đặt</th>
+                            <th scope="col">Thời gian tạo</th>
+                            <th scope="col">Dự kiến hết hàng</th>
+                            <th scope="col">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resData">
+                       
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row mt-3 align-items-center">
+                <div class="col-md-6">
+                    <nav aria-label="Product pagination">
+                        <ul class="pagination pagination-sm">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <p class="text-muted">Hiển thị 1 - 10 / Tổng số 3681 hàng bao gồm 3765 Mã hàng</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="productCode">Mã sản phẩm</label>
+                                <input type="text" class="form-control" id="productCode" data-product-id="0" placeholder="Nhập mã sản phẩm">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="productName">Tên sản phẩm</label>
+                                <input type="text" class="form-control" id="productName" placeholder="Nhập tên sản phẩm">
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-around align-items-center">
+                            <div class="form-group">
+                                <input type="checkbox" class="form-control" id="isActive">
+                                <label for="productName">Kích hoạt</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" class="form-control" id="isSell">
+                                <label for="productName">Kinh doanh</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="productName">Tên sản phẩm</label>
+                                <input type="text" class="form-control" id="productGroup" placeholder="Nhập nhóm sản phẩm">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="category">Danh mục</label>
+                                <input type="text" class="form-control" id="productClass" placeholder="Nhập phân loại sản phẩm">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="price">Giá bán</label>
+                                <input type="number" class="form-control" id="price" placeholder="Nhập giá bán">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="cost">Giá vốn</label>
+                                <input type="number" class="form-control" id="cost" placeholder="Nhập giá vốn">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="quantity">Số lượng tồn kho</label>
+                                <input type="number" class="form-control" id="quantity" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="sku">Trọng lượng:(/1 đơn vị)</label>
+                                <input type="number" class="form-control" id="weight" placeholder="Nhập khối lượng">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="description">Mô tả sản phẩm</label>
+                                <textarea class="form-control" id="description" rows="3" placeholder="Nhập mô tả sản phẩm"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="supplier">Nhà cung cấp</label>
+                                <input type="text" class="form-control" id="supplier" placeholder="Nhập tên nhà cung cấp">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btnSave">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+             let url = '@Url.Action("GetProducts", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+             console.log(url)
+             $.ajax({
+                 url: url,
+                 type: "Get", // Hoặc "POST" tùy thuộc vào action của bạn
+                 dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                 success: function(data) {
+                     console.log("Dữ liệu nhận được khi tải trang:", data);
+                     console.log("ok2")
+                     let d = new Date();
+                     let tbody = $('#resData');
+                     $.each(data, function(index, item) {
+                      var newRow = '<tr>'
+                                    +'<th scope="row"><input type="checkbox"></th>'
+                                    +'<td><i class="far fa-star"></i></td>'
+                                    +'<td>'+item.pid+'</td>'
+                                    +'<td>'+item.pName+'</td>'
+                                    +'<td>'+item.pSell+'</td>'
+                                    +'<td>'+item.pCapital+'</td>'
+                                    +'<td>'+item.pReserves+'</td>'
+                                    +'<td>0</td>'
+                                    +'<td>'+d.toISOString().split('T')[0]+'</td>'
+                                    +'<td>-</td>'
+                                    +'<td>Thao tác: <button type="button" class="btn btn-primary btnChange"  id = "'+item.pid+'" data-toggle="modal" data-target="#exampleModalLong"><i class="fa-solid fa-pen"></i></button></td>';
+                      tbody.append(newRow); // Thêm hàng mới vào <tbody>
+                    });
+                 },
+                 error: function(xhr, status, error) {
+                     console.error("Lỗi AJAX khi tải trang:", error);
+
+                 }
+             });
+         });
+
+        $('#resData').on('click', '.btnChange', function() {
+            let url = '@Url.Action("GetProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+             console.log(url)
+             let idBtn = $(this).attr('id')
+             console.log(idBtn)
+             $.ajax({
+                 url: url,
+                 type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
+                 data: { PID: idBtn },
+                 dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                 success: function(data) {
+                     console.log(data)
+                    $('#productCode').attr('data-product-id',data.pid);
+                    $("#productCode").val(data.pCode);
+                    $("#productName").val(data.pName);
+                    $("#productGroup").val(data.pGroup);
+                    $("#productClass").val(data.pClass);
+                    $("#price").val(data.pSell);
+                    $("#cost").val(data.pCapital);
+                    $("#quantity").val(data.pReserves);
+                    $("#weight").val(data.pWeight);
+                    //$("#productCode").val(data.pid);
+                 },
+                 error: function(xhr, status, error) {
+                     console.error("Lỗi AJAX khi tải trang:", error);
+
+                 }
+             });
+         });
+         $('#btnSave').click(function(){
+            let url = '@Url.Action("GetProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+             console.log(url)
+             let idBtn = $(this).attr('id')
+             console.log(idBtn)
+             $.ajax({
+                 url: url,
+                 type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
+                 data: { PID: idBtn },
+                 dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                 success: function(data) {
+                     console.log(data)
+                    $('#productCode').attr('data-product-id',data.pid);
+                    $("#productCode").val(data.pCode);
+                    $("#productName").val(data.pName);
+                    $("#productGroup").val(data.pGroup);
+                    $("#productClass").val(data.pClass);
+                    $("#price").val(data.pSell);
+                    $("#cost").val(data.pCapital);
+                    $("#quantity").val(data.pReserves);
+                    $("#weight").val(data.pWeight);
+                    //$("#productCode").val(data.pid);
+                 },
+                 error: function(xhr, status, error) {
+                     console.error("Lỗi AJAX khi tải trang:", error);
+
+                 }
+             });
+         });
+         $('#btnSave').click(function(){
+            let url = '@Url.Action("GetProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+             console.log(url)
+             let idBtn = $(this).attr('id')
+             console.log(idBtn)
+             $.ajax({
+                 url: url,
+                 type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
+                 data: { PID: idBtn },
+                 dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                 success: function(data) {
+                     console.log(data)
+                    $('#productCode').attr('data-product-id',data.pid);
+                    $("#productCode").val(data.pCode);
+                    $("#productName").val(data.pName);
+                    $("#productGroup").val(data.pGroup);
+                    $("#productClass").val(data.pClass);
+                    $("#price").val(data.pSell);
+                    $("#cost").val(data.pCapital);
+                    $("#quantity").val(data.pReserves);
+                    $("#weight").val(data.pWeight);
+                    //$("#productCode").val(data.pid);
+                 },
+                 error: function(xhr, status, error) {
+                     console.error("Lỗi AJAX khi tải trang:", error);
+
+                 }
+             });
+         })
+    </script>
+}

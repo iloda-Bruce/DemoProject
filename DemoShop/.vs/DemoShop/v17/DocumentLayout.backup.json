@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "D:\\DemoProject\\DemoShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{947A0F8E-EC09-4C71-B434-FC1F9C5C202F}|eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj|d:\\demoproject\\demoshop\\ecommerceapp.infastructrur\\ecommerceapp.infastructrur.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{947A0F8E-EC09-4C71-B434-FC1F9C5C202F}|eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj|solutionrelative:ecommerceapp.infastructrur\\ecommerceapp.infastructrur.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\areas\\admin\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\areas\\admin\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\areas\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\areas\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\areas\\admin\\views\\adminpage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\areas\\admin\\views\\adminpage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "DATN01\\Views\\Login\\Index.cshtml",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "DATN01\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-15T13:03:35.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "DATN01\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "DATN01\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T11:43:30.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAQwBEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T22:31:17.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
+              "RelativeDocumentMoniker": "DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
+              "RelativeToolTip": "DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAGwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T22:30:13.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "eCommerceApp.Infastructrur",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
-              "RelativeDocumentMoniker": "eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
-              "RelativeToolTip": "eCommerceApp.Infastructrur\\eCommerceApp.Infastructrur.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-12T06:12:34.92Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAAAEQBAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-14T22:22:17.871Z",
               "EditorCaption": ""
             }
           ]

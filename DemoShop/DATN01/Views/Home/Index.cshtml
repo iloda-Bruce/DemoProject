@@ -1,0 +1,245 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiotViet - Giao diện mẫu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+    <header class="bg-light">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand col-2" href="#" >
+                    <img src="~/images/kgh1684404273.png" alt="KiotViet" class="col-12">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Chi phí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Khách hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tính năng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hỗ trợ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary btn-sm rounded-pill text-white" href="@Url.Action("Index", "Login")">Đăng ký</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary btn-sm rounded-pill text-white" href="@Url.Action("Index", "Login")">Đăng nhập</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>Phần mềm quản lý bán hàng phổ biến nhất</h1>
+                    <p class="lead">...</p>
+                    <div class="d-flex">
+                        <a href="#" class="btn btn-warning btn-lg rounded-pill mr-3">Dùng thử miễn phí</a>
+                        <a href="#" class="btn btn-outline-light btn-lg rounded-pill">Xem báo giá</a>
+                    </div>
+                    <div class="mt-3">
+                        <small>Đã có <strong>300.000+</strong> cửa hàng tin dùng</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="hero-image.png" alt="Hình ảnh Hero" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm rounded h-100">
+                        <div class="card-body text-center">
+                            <img src="~/images/unnamed-1.png" alt="Tính năng 1" class="mb-3 col-4">
+                            <h5 class="card-title">Đơn giản & Dễ sử dụng</h5>
+                            <p class="card-text">Giao diện đơn giản, thân thiện và thông minh. Chỉ mất 15 phút làm quen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm rounded h-100">
+                        <div class="card-body text-center">
+                            <img src="~/images/unnamed-2.png" alt="Tính năng 1" class="mb-3 col-4">
+                            <h5 class="card-title">Tiết kiệm chi phí</h5>
+                            <p class="card-text">Miễn phí cài đặt, triển khai, nâng cấp và hỗ trợ. Rẻ hơn một ly trà đá.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card border-0 shadow-sm rounded h-100">
+                        <div class="card-body text-center">
+                            <img src="~/images/unnamed-3.png" alt="Tính năng 1" class="mb-3 col-4">
+                            <h5 class="card-title">Phù hợp cho từng ngành hàng</h5>
+                            <p class="card-text">Phần mềm quản lý bán hàng phù hợp cho hơn 20 ngành nghề kinh doanh khác nhau.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="industries py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Chúng tôi thiết kế phần mềm quản lý bán hàng chuyên biệt cho từng ngành hàng</h2>
+            <div class="row">
+                <div class="col-md-6 d-flex flex-wrap">
+                    <div class="col-6 d-flex">
+                        <i class="fa-solid fa-shirt col-2 p-0"></i>
+                        <p class="col-9">Thời trang, mỹ phẩm</p>
+                    </div>
+                    <div class="col-6 d-flex">
+                        <i class="fa-solid fa-shirt col-2 p-0"></i>
+                        <p class="col-9">Siêu thị, tạp hóa</p>
+                    </div>
+                    <div class="col-6 d-flex">
+                        <i class="fa-regular fa-bell-concierge col-2 p-0"></i>
+                        <p class="col-9">Nhà hàng, quán ăn</p>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-wrap">
+                    <div class="col-6 d-flex">
+                        <i class="fa-solid fa-shirt col-2 p-0"></i>
+                        <p class="col-9">Thời trang, mỹ phẩm</p>
+                    </div>
+                    <div class="col-6 d-flex">
+                        <i class="fa-solid fa-shirt col-2 p-0"></i>
+                        <p class="col-9">Siêu thị, tạp hóa</p>
+                    </div>
+                    <div class="col-6 d-flex">
+                        <i class="fa-regular fa-bell-concierge col-2 p-0"></i>
+                        <p class="col-9">Nhà hàng, quán ăn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-auto">
+                    <a href="#" class="btn btn-primary btn-lg rounded-pill">Xem thêm ngành hàng</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trial py-5">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-8">
+                    <h2>7 ngày dùng thử miễn phí</h2>
+                    <p class="lead">Trải nghiệm ngay sức mạnh của KiotViet</p>
+                    <a href="#" class="btn btn-success btn-lg rounded-pill">Đăng ký ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">KiotViet - Giải pháp kinh doanh toàn diện</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm rounded h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Quản lý bán hàng</h5>
+                            <p class="card-text">...</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill btn-sm">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm rounded h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Quản lý kho hàng</h5>
+                            <p class="card-text">...</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill btn-sm">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <div class="card border-0 shadow-sm rounded h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Marketing & Bán hàng</h5>
+                            <p class="card-text">...</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill btn-sm">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <h5>KiotViet</h5>
+                    <p>...</p>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Sản phẩm</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Quản lý bán hàng</a></li>
+                        <li><a href="#" class="text-white">Quản lý kho</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Hỗ trợ</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Hướng dẫn</a></li>
+                        <li><a href="#" class="text-white">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Liên hệ</h5>
+                    <p>Tổng đài: 1900 xxxx</p>
+                    <p>Email: support@kiotviet.com</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2023 KiotViet. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+﻿.logoImg {
+    background-image: url('../images/kgh1684404273.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+}
+.imgBill {
+    background-image: url('../images/unnamed-1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.imgBill2 {
+    background-image: url('../images/unnamed-2.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.imgBill3 {
+    background-image: url('../images/unnamed-3.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
