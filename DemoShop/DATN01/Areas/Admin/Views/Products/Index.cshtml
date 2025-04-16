@@ -184,7 +184,7 @@
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Cập nhật sản phẩm</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -205,12 +205,12 @@
                             </div>
                         </div>
                         <div class="col-md-4 d-flex justify-content-around align-items-center">
-                            <div class="form-group">
-                                <input type="checkbox" class="form-control" id="isActive">
+                            <div class="d-flex align-items-baseline">
+                                <input type="checkbox" class="p-1" id="isActive">
                                 <label for="productName">Kích hoạt</label>
                             </div>
-                            <div class="form-group">
-                                <input type="checkbox" class="form-control" id="isSell">
+                            <div class="d-flex align-items-baseline">
+                                <input type="checkbox" class="p-1" id="isSell">
                                 <label for="productName">Kinh doanh</label>
                             </div>
                         </div>
@@ -247,7 +247,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="quantity">Số lượng tồn kho</label>
-                                <input type="number" class="form-control" id="quantity" readonly>
+                                <input type="number" class="form-control" id="limit" placeholder="Nhập số lượng">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -261,7 +261,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="description">Mô tả sản phẩm</label>
-                                <textarea class="form-control" id="description" rows="3" placeholder="Nhập mô tả sản phẩm"></textarea>
+                                <textarea class="form-control" id="note" rows="3" placeholder="Nhập ghi chú sản phẩm"></textarea>
                             </div>
                         </div>
                     </div>
@@ -270,7 +270,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="supplier">Nhà cung cấp</label>
-                                <input type="text" class="form-control" id="supplier" placeholder="Nhập tên nhà cung cấp">
+                                <input type="text" class="form-control" id="mark" placeholder="Nhập nhãn hiệu">
                             </div>
                         </div>
                     </div>
@@ -298,10 +298,10 @@
                      let d = new Date();
                      let tbody = $('#resData');
                      $.each(data, function(index, item) {
-                      var newRow = '<tr>'
+                      let newRow = '<tr id="'+item.pid+'">'
                                     +'<th scope="row"><input type="checkbox"></th>'
                                     +'<td><i class="far fa-star"></i></td>'
-                                    +'<td>'+item.pid+'</td>'
+                                    +'<td>'+item.pCode+'</td>'
                                     +'<td>'+item.pName+'</td>'
                                     +'<td>'+item.pSell+'</td>'
                                     +'<td>'+item.pCapital+'</td>'
@@ -309,7 +309,7 @@
                                     +'<td>0</td>'
                                     +'<td>'+d.toISOString().split('T')[0]+'</td>'
                                     +'<td>-</td>'
-                                    +'<td>Thao tác: <button type="button" class="btn btn-primary btnChange"  id = "'+item.pid+'" data-toggle="modal" data-target="#exampleModalLong"><i class="fa-solid fa-pen"></i></button></td>';
+                                    +'<td><button type="button" class="btn btn-primary btnChange" data-toggle="modal" data-target="#exampleModalLong"><i class="fa-solid fa-pen"></i></button> <button type="button" class="btn btn-danger btnDel"><i class="fa-solid fa-trash"></i></button></td>';
                       tbody.append(newRow); // Thêm hàng mới vào <tbody>
                     });
                  },
@@ -319,11 +319,12 @@
                  }
              });
          });
-
         $('#resData').on('click', '.btnChange', function() {
             let url = '@Url.Action("GetProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
              console.log(url)
-             let idBtn = $(this).attr('id')
+             //let idBtn = $(this).attr('id')
+             let parentRow = $(this).closest("tr");
+             let idBtn = parentRow.attr('id')
              console.log(idBtn)
              $.ajax({
                  url: url,
@@ -335,77 +336,108 @@
                     $('#productCode').attr('data-product-id',data.pid);
                     $("#productCode").val(data.pCode);
                     $("#productName").val(data.pName);
+                    $("#isActive").prop("checked", data.isActive);
+                    $("#isSell").prop("checked", data.isSell);
                     $("#productGroup").val(data.pGroup);
                     $("#productClass").val(data.pClass);
                     $("#price").val(data.pSell);
                     $("#cost").val(data.pCapital);
-                    $("#quantity").val(data.pReserves);
+                    $("#limit").val(data.pReserves);
                     $("#weight").val(data.pWeight);
+                    $("#note").val(data.notes);
+                    $("#mark").val(data.pMark);
                     //$("#productCode").val(data.pid);
                  },
                  error: function(xhr, status, error) {
                      console.error("Lỗi AJAX khi tải trang:", error);
-
                  }
              });
          });
          $('#btnSave').click(function(){
-            let url = '@Url.Action("GetProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+            let url = '@Url.Action("UpdateProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
              console.log(url)
-             let idBtn = $(this).attr('id')
-             console.log(idBtn)
+             let _product ={
+             //       PID int identity(1,1) primary key,
+             //   PGroup nvarchar(50) null,
+                //PClass nvarchar(50) null,
+                //PMark nvarchar(50) null,
+                //PCode nvarchar(50) null,
+                //PName nvarchar(50) null,
+                //PLimit int null,
+                //PCapital float null,
+                //PSell float null,
+                //PWeight float null,
+                //Notes nvarchar(200) null,
+                //isSell bit null,
+             //   isActive bit null
+                "PID" :  $('#productCode').attr('data-product-id'),
+                "PGroup":  $("#productGroup").val(),
+                "PClass":  $("#productClass").val(),
+                "PMark":  $("#mark").val(),
+                "PCode":  $("#productCode").val(),
+                "PName":  $("#productName").val(),
+                "PLimit":  $("#limit").val(),
+                "PCapital":  $("#cost").val(),
+                "PSell":  $("#price").val(),
+                "PWeight":  $("#weight").val(),
+                "Notes":  $("#note").val(),
+                "isSell":  $("#isSell").is(':checked'),
+                "isActive":  $("#isActive").is(':checked'),
+             }
+             console.log(_product)
              $.ajax({
                  url: url,
                  type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
-                 data: { PID: idBtn },
+                 data: JSON.stringify(_product),
                  dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                 contentType: 'application/json',
                  success: function(data) {
-                     console.log(data)
-                    $('#productCode').attr('data-product-id',data.pid);
-                    $("#productCode").val(data.pCode);
-                    $("#productName").val(data.pName);
-                    $("#productGroup").val(data.pGroup);
-                    $("#productClass").val(data.pClass);
-                    $("#price").val(data.pSell);
-                    $("#cost").val(data.pCapital);
-                    $("#quantity").val(data.pReserves);
-                    $("#weight").val(data.pWeight);
-                    //$("#productCode").val(data.pid);
+                    console.error(data.code);
+                    if(data.code === 200){
+                        alert("Cập nhật sản phẩm thành công!");
+                        $('#exampleModalLong').modal('hide');
+                         location.reload();
+                    }else{
+                        alert("Cập nhật sản phẩm thất bại!");
+                    }
                  },
                  error: function(xhr, status, error) {
-                     console.error("Lỗi AJAX khi tải trang:", error);
+                     console.error("Lỗi AJAX ", error);
 
                  }
              });
          });
-         $('#btnSave').click(function(){
-            let url = '@Url.Action("GetProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
-             console.log(url)
-             let idBtn = $(this).attr('id')
-             console.log(idBtn)
-             $.ajax({
-                 url: url,
-                 type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
-                 data: { PID: idBtn },
-                 dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
-                 success: function(data) {
-                     console.log(data)
-                    $('#productCode').attr('data-product-id',data.pid);
-                    $("#productCode").val(data.pCode);
-                    $("#productName").val(data.pName);
-                    $("#productGroup").val(data.pGroup);
-                    $("#productClass").val(data.pClass);
-                    $("#price").val(data.pSell);
-                    $("#cost").val(data.pCapital);
-                    $("#quantity").val(data.pReserves);
-                    $("#weight").val(data.pWeight);
-                    //$("#productCode").val(data.pid);
-                 },
-                 error: function(xhr, status, error) {
-                     console.error("Lỗi AJAX khi tải trang:", error);
 
-                 }
-             });
-         })
+         $('#resData').on('click', '.btnDel', function() {
+            let url = '@Url.Action("DeleteProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+            console.log(url)
+            //let idBtn = $(this).attr('id')
+            let parentRow = $(this).closest("tr");
+            let idBtn = parentRow.attr('id')
+            console.log(typeof idBtn)
+            if (confirm('Bạn chắc chắn muốn xóa sản phẩm này!')) 
+            {
+                $.ajax({
+                    url: url, // Thay thế bằng URL thực tế của action
+                    type: 'POST', // Hoặc 'DELETE' tùy theo thiết kế API của bạn
+                    data: { PID: idBtn },
+                    success: function(response) {
+                        if(response.code == 200){
+                             alert("Sản phẩm đã được xóa thành công");
+                        }else{
+                             alert("Sản phẩm đã được xóa thất bại");
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // Xử lý lỗi nếu có
+                        console.error("Lỗi xóa sản phẩm:", error);
+                        // Ví dụ: Hiển thị thông báo lỗi cho người dùng
+                    }
+                });
+            } else {
+              // Do nothing!
+              //console.log('Thing was not saved to the database.');
+            }
+         });
     </script>
 }

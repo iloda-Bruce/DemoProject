@@ -22,6 +22,7 @@ namespace DATN01.Areas.Admin.Models
         public string? PClass { set; get; }
         public string? PCode { set; get; }
         public string? PName { set; get; }
+        public string? PMark { set; get; }
         public int PLimit { set; get; }
         public decimal PCapital { set; get; } 
         public decimal PSell { set; get; }

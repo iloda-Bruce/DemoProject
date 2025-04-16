@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Security.Cryptography;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DATN01.Areas.Admin.Controllers
 {
@@ -91,6 +92,7 @@ namespace DATN01.Areas.Admin.Controllers
                                 product.PClass = row["PClass"].ToString();
                                 product.PCode = row["PCode"].ToString();
                                 product.PName = row["PName"].ToString();
+                                product.PMark = row["PMark"].ToString();
                                 product.PLimit = int.Parse(row["PLimit"].ToString());
                                 product.PCapital = decimal.Parse(row["PCapital"].ToString());
                                 product.PSell = decimal.Parse(row["PSell"].ToString());
@@ -113,17 +115,38 @@ namespace DATN01.Areas.Admin.Controllers
             }
         }
         [HttpPost]
-        public IActionResult UpdateProduct([FromBody] ProductModel _product)
+        public IActionResult UpdateProduct([FromBody]ProductModel _product)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
                 using (SqlCommand cmd = new SqlCommand())
                 {
+                    // $('#productCode').attr('data-product-id', data.pid);
+                    //$("#productCode").val(data.pCode);
+                    //$("#productName").val(data.pName);
+                    //$("#productGroup").val(data.pGroup);
+                    //$("#productClass").val(data.pClass);
+                    //$("#price").val(data.pSell);
+                    //$("#cost").val(data.pCapital);
+                    //$("#quantity").val(data.pReserves);
+                    //$("#weight").val(data.pWeight);
                     cmd.Connection = con;
-                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.CommandText = "spUpdate_tblP01";
-                    cmd.Parameters.AddWithValue("", _product.PID);
+                    cmd.Parameters.AddWithValue("@PID", _product.PID);
+                    cmd.Parameters.AddWithValue("@PCode", _product.PCode);
+                    cmd.Parameters.AddWithValue("@PName", _product.PName);
+                    cmd.Parameters.AddWithValue("@PMark", _product.PMark);
+                    cmd.Parameters.AddWithValue("@PLimit", _product.PLimit);
+                    cmd.Parameters.AddWithValue("@PGroup", _product.PGroup);
+                    cmd.Parameters.AddWithValue("@PClass", _product.PClass);
+                    cmd.Parameters.AddWithValue("@PSell", _product.PSell);
+                    cmd.Parameters.AddWithValue("@PCapital", _product.PCapital);
+                    cmd.Parameters.AddWithValue("@PWeight", _product.PWeight);
+                    cmd.Parameters.AddWithValue("@Notes", _product.Notes);
+                    cmd.Parameters.AddWithValue("@isSell", _product.isSell);
+                    cmd.Parameters.AddWithValue("@isActive", _product.isActive);
                     int res = cmd.ExecuteNonQuery();
                     if(res > 0)
                     {
@@ -133,6 +156,31 @@ namespace DATN01.Areas.Admin.Controllers
                     {
                         return Json(new { code = 401, message = "Fail" });
                     }
+                }
+            }
+        }
+
+        [HttpPost]
+        public IActionResult DeleteProduct(int PID)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = "Delete from tblP01 where tblP01.PID='" + PID + "'";
+                    int res = cmd.ExecuteNonQuery();
+                    if(res > 0)
+                    {
+                        return Json(new { code = 200, message = "Xóa sản phẩm thành công!" });
+                    }
+                    else
+                    {
+                        return Json(new { code = 401, message = "Xóa sản phẩm thất bại!" });
+                    }
+                    
                 }
             }
         }
