@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DemoProject\\DemoShop\\ShopInfrastructor\\ShopInfrastructor.csproj": {}
+    "D:\\DATN\\DemoShop\\ShopInfrastructor\\ShopInfrastructor.csproj": {}
   },
   "projects": {
-    "D:\\DemoProject\\DemoShop\\ShopInfrastructor\\ShopInfrastructor.csproj": {
+    "D:\\DATN\\DemoShop\\ShopInfrastructor\\ShopInfrastructor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DemoProject\\DemoShop\\ShopInfrastructor\\ShopInfrastructor.csproj",
+        "projectUniqueName": "D:\\DATN\\DemoShop\\ShopInfrastructor\\ShopInfrastructor.csproj",
         "projectName": "ShopInfrastructor",
-        "projectPath": "D:\\DemoProject\\DemoShop\\ShopInfrastructor\\ShopInfrastructor.csproj",
+        "projectPath": "D:\\DATN\\DemoShop\\ShopInfrastructor\\ShopInfrastructor.csproj",
         "packagesPath": "C:\\Users\\nam59\\.nuget\\packages\\",
-        "outputPath": "D:\\DemoProject\\DemoShop\\ShopInfrastructor\\obj\\",
+        "outputPath": "D:\\DATN\\DemoShop\\ShopInfrastructor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

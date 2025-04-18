@@ -119,7 +119,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end">
-                    <button class="btn btn-success mr-2"><i class="fas fa-plus"></i> Thêm mới</button>
+
+                    <button class="btn btn-success mr-2" id="btnAdd" data-toggle="modal" data-target="#exampleModalLong"><i class="fas fa-plus"></i> Thêm mới</button>
                     <button class="btn btn-info mr-2"><i class="fas fa-upload"></i> Import</button>
                     <button class="btn btn-warning mr-2"><i class="fas fa-download"></i> Xuất file</button>
                     <button class="btn btn-light border mr-2"><i class="fas fa-cog"></i></button>
@@ -285,6 +286,7 @@
 </div>
 @section Scripts{
     <script>
+        var isAddPro = false;
         $(document).ready(function() {
              let url = '@Url.Action("GetProducts", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
              console.log(url)
@@ -354,60 +356,136 @@
              });
          });
          $('#btnSave').click(function(){
-            let url = '@Url.Action("UpdateProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
-             console.log(url)
-             let _product ={
-             //       PID int identity(1,1) primary key,
-             //   PGroup nvarchar(50) null,
-                //PClass nvarchar(50) null,
-                //PMark nvarchar(50) null,
-                //PCode nvarchar(50) null,
-                //PName nvarchar(50) null,
-                //PLimit int null,
-                //PCapital float null,
-                //PSell float null,
-                //PWeight float null,
-                //Notes nvarchar(200) null,
-                //isSell bit null,
-             //   isActive bit null
-                "PID" :  $('#productCode').attr('data-product-id'),
-                "PGroup":  $("#productGroup").val(),
-                "PClass":  $("#productClass").val(),
-                "PMark":  $("#mark").val(),
-                "PCode":  $("#productCode").val(),
-                "PName":  $("#productName").val(),
-                "PLimit":  $("#limit").val(),
-                "PCapital":  $("#cost").val(),
-                "PSell":  $("#price").val(),
-                "PWeight":  $("#weight").val(),
-                "Notes":  $("#note").val(),
-                "isSell":  $("#isSell").is(':checked'),
-                "isActive":  $("#isActive").is(':checked'),
-             }
-             console.log(_product)
-             $.ajax({
-                 url: url,
-                 type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
-                 data: JSON.stringify(_product),
-                 dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
-                 contentType: 'application/json',
-                 success: function(data) {
-                    console.error(data.code);
-                    if(data.code === 200){
-                        alert("Cập nhật sản phẩm thành công!");
-                        $('#exampleModalLong').modal('hide');
-                         location.reload();
-                    }else{
-                        alert("Cập nhật sản phẩm thất bại!");
-                    }
-                 },
-                 error: function(xhr, status, error) {
-                     console.error("Lỗi AJAX ", error);
-
+             if(isAddPro){
+                 let url = '@Url.Action("AddProducts", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+                 console.log(url)
+                 let _product ={
+                 //       PID int identity(1,1) primary key,
+                 //   PGroup nvarchar(50) null,
+                    //PClass nvarchar(50) null,
+                    //PMark nvarchar(50) null,
+                    //PCode nvarchar(50) null,
+                    //PName nvarchar(50) null,
+                    //PLimit int null,
+                    //PCapital float null,
+                    //PSell float null,
+                    //PWeight float null,
+                    //Notes nvarchar(200) null,
+                    //isSell bit null,
+                 //   isActive bit null
+                    "PID" : 0,
+                    "PGroup":  $("#productGroup").val(),
+                    "PClass":  $("#productClass").val(),
+                    "PMark":  $("#mark").val(),
+                    "PCode":  $("#productCode").val(),
+                    "PName":  $("#productName").val(),
+                    "PLimit":  $("#limit").val(),
+                    "PCapital":  $("#cost").val(),
+                    "PSell":  $("#price").val(),
+                    "PWeight":  $("#weight").val(),
+                    "Notes":  $("#note").val(),
+                    "isSell":  $("#isSell").is(':checked'),
+                    "isActive":  $("#isActive").is(':checked'),
                  }
-             });
-         });
+                 console.log(_product)
+                 $.ajax({
+                     url: url,
+                     type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
+                     data: JSON.stringify(_product),
+                     dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                     contentType: 'application/json',
+                     success: function(data) {
+                        console.error(data.code);
+                        if(data.code === 200){
+                            alert("Thêm sản phẩm thành công!");
+                            $('#exampleModalLong').modal('hide');
+                            if(isAddPro){
+                                isAddPro = false
+                            }else{
 
+                            }
+                            location.reload();
+                        }else{
+                            alert("Thêm sản phẩm thất bại!");
+                        }
+                     },
+                     error: function(xhr, status, error) {
+                         console.error("Lỗi AJAX ", error);
+
+                     }
+                 });
+             }else{
+                 let url = '@Url.Action("UpdateProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+                 console.log(url)
+                 let _product ={
+                 //       PID int identity(1,1) primary key,
+                 //   PGroup nvarchar(50) null,
+                    //PClass nvarchar(50) null,
+                    //PMark nvarchar(50) null,
+                    //PCode nvarchar(50) null,
+                    //PName nvarchar(50) null,
+                    //PLimit int null,
+                    //PCapital float null,
+                    //PSell float null,
+                    //PWeight float null,
+                    //Notes nvarchar(200) null,
+                    //isSell bit null,
+                 //   isActive bit null
+                    "PID" :  $('#productCode').attr('data-product-id'),
+                    "PGroup":  $("#productGroup").val(),
+                    "PClass":  $("#productClass").val(),
+                    "PMark":  $("#mark").val(),
+                    "PCode":  $("#productCode").val(),
+                    "PName":  $("#productName").val(),
+                    "PLimit":  $("#limit").val(),
+                    "PCapital":  $("#cost").val(),
+                    "PSell":  $("#price").val(),
+                    "PWeight":  $("#weight").val(),
+                    "Notes":  $("#note").val(),
+                    "isSell":  $("#isSell").is(':checked'),
+                    "isActive":  $("#isActive").is(':checked'),
+                 }
+                 console.log(_product)
+                 $.ajax({
+                     url: url,
+                     type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
+                     data: JSON.stringify(_product),
+                     dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                     contentType: 'application/json',
+                     success: function(data) {
+                        console.error(data.code);
+                        if(data.code === 200){
+                            alert("Cập nhật sản phẩm thành công!");
+                            $('#exampleModalLong').modal('hide');
+                            if(isAddPro){
+                                isAddPro = false
+                            }else{
+
+                            }
+                            location.reload();
+                        }else{
+                            alert("Cập nhật sản phẩm thất bại!");
+                        }
+                     },
+                     error: function(xhr, status, error) {
+                         console.error("Lỗi AJAX ", error);
+
+                     }
+                 });
+             }
+         });
+         $("#btnAdd").click(function(){
+             if(isAddPro){
+
+             }else{
+                 isAddPro = true;
+             }
+         });
+         $(document).ready(function() {
+            $('#exampleModalLong').on('hidden.bs.modal', function (e) {
+            $('#exampleModalLong form')[0].reset();
+            });
+         });
          $('#resData').on('click', '.btnDel', function() {
             let url = '@Url.Action("DeleteProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
             console.log(url)

@@ -1,0 +1,219 @@
+﻿@{
+    ViewData["Title"] = "ProductPage";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo tài khoản dùng thử miễn phí</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+           
+        }
+
+        .signup-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 30px auto; /* Reduced top/bottom margin for smaller screens */
+        }
+
+        .left-section {
+            background: linear-gradient(135deg, #007bff, #6610f2);
+            color: #fff;
+            padding: 30px; /* Adjusted padding for smaller screens */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+            .left-section h2 {
+                font-size: 2rem; /* Adjusted font size for smaller screens */
+                margin-bottom: 15px;
+            }
+
+            .left-section p {
+                font-size: 1rem; /* Adjusted font size for smaller screens */
+            }
+
+        .right-section {
+            padding: 20px; /* Adjusted padding for smaller screens */
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .form-control {
+            border-radius: 4px;
+        }
+
+        .form-check-label {
+            color: #6c757d;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .captcha-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .captcha-input {
+            width: 100px; /* Adjusted width for smaller screens */
+            margin-right: 10px;
+        }
+
+        .refresh-captcha {
+            color: #007bff;
+            cursor: pointer;
+            font-size: 1rem; /* Adjusted font size for smaller screens */
+        }
+
+        .form-text {
+            font-size: 0.8rem; /* Adjusted font size for smaller screens */
+            color: #6c757d;
+        }
+
+        /* Media query for larger screens to restore the side-by-side layout */
+        /* media (min-width: 992px) {
+                    .signup-container
+
+                {
+                    max-width: 900px;
+                    margin: 50px auto;
+                    display: flex;
+                } */
+
+        .left-section {
+            padding: 40px;
+        }
+
+            .left-section h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+            .left-section p {
+                font-size: 1.1rem;
+            }
+
+        .right-section {
+            padding: 30px;
+            flex: 1;
+        }
+
+        .captcha-input {
+            width: 120px;
+            margin-right: 10px;
+        }
+
+        .refresh-captcha {
+            font-size: 1.2rem;
+        }
+
+        .form-text {
+            font-size: 0.9rem;
+        }
+
+        }
+    </style>
+</head>
+<body style=" font-family: sans-serif;background-color: #f8f9fa;">
+    <div class="">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="col-12" id="signup-container">
+                    <div class="row no-gutters">
+                        <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center left-section" >
+                            <div>
+                                <h2>Quản lý dễ dàng</h2>
+                                <p>Bán hàng đơn giản</p>
+                                <p><small>Hỗ trợ đăng kí 1800 6162</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 right-section">
+                            <h3 class="mb-4">Tạo tài khoản dùng thử miễn phí</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Nhập họ và tên</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Ví dụ: Nguyễn Văn A">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Số điện thoại</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><img src="https://flagcdn.com/20x15/vn.png" alt="Vietnam Flag"></span>
+                                        </div>
+                                        <input type="tel" class="form-control" id="phone" placeholder="0123 456 789">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Quốc gia đang kinh doanh</label>
+                                    <select class="form-control" id="country">
+                                        <option>Việt Nam</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="business-type">Chọn khu vực</label>
+                                    <select class="form-control" id="business-type">
+                                        <option>Chọn...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="captcha">Mã xác thực</label>
+                                    <div class="captcha-container">
+                                        <input type="text" class="form-control captcha-input" id="captcha" placeholder="Nhập mã xác thực">
+                                        <div class="border rounded p-2 mr-2">
+                                            <span id="captcha-value">4107</span>
+                                            <span class="refresh-captcha" id="refresh-captcha" title="Làm mới mã">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417l.3-.3a.5.5 0 0 1 .593.067v5.092a.5.5 0 0 1-.475.41c-.212.05-.423.08-.634.09a5 5 0 0 0-4.502 2.182m.22.28a.5.5 0 1 1-.577.94l-2-.5a.5.5 0 0 1-.282-.634l.3-.3a.5.5 0 0 1 .582-.067v5.722a.5.5 0 0 1-.475.41c-.212.05-.423.08-.634.09a5 5 0 0 0 2.223-1.034z" />
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="terms">
+                                    <label class="form-check-label" for="terms">Tôi đã đọc và đồng ý <a href="#">Điều khoản và chính sách sử dụng</a> của KiotViet</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Tiếp tục</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#refresh-captcha").click(function() {
+                const newCaptcha = Math.floor(Math.random() * 9000) + 1000;
+                $("#captcha-value").text(newCaptcha);
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DemoProject\\DemoShop\\",
+  "WorkspaceRootPath": "D:\\DATN\\DemoShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\areas\\admin\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\areas\\admin\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\areas\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\datn\\demoshop\\datn01\\areas\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\areas\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\areas\\admin\\views\\adminpage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\datn\\demoshop\\datn01\\areas\\admin\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\areas\\admin\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\datn\\demoshop\\datn01\\areas\\admin\\views\\adminpage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\areas\\admin\\views\\adminpage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\datn\\demoshop\\datn01\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\demoproject\\demoshop\\datn01\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|d:\\datn\\demoshop\\datn01\\wwwroot\\css\\adminstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{DDF57424-E160-4C22-919E-B852B361733D}|DATN01\\DATN01.csproj|solutionrelative:datn01\\wwwroot\\css\\adminstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,28 +30,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Views\\Login\\Index.cshtml",
-              "RelativeDocumentMoniker": "DATN01\\Views\\Login\\Index.cshtml",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Views\\Login\\Index.cshtml",
-              "RelativeToolTip": "DATN01\\Views\\Login\\Index.cshtml",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHQAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T13:03:35.312Z",
+              "Title": "AdminStyle.css",
+              "DocumentMoniker": "D:\\DATN\\DemoShop\\DATN01\\wwwroot\\css\\AdminStyle.css",
+              "RelativeDocumentMoniker": "DATN01\\wwwroot\\css\\AdminStyle.css",
+              "ToolTip": "D:\\DATN\\DemoShop\\DATN01\\wwwroot\\css\\AdminStyle.css",
+              "RelativeToolTip": "DATN01\\wwwroot\\css\\AdminStyle.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-18T07:28:30.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "LoginController.cs",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Controllers\\LoginController.cs",
+              "DocumentMoniker": "D:\\DATN\\DemoShop\\DATN01\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "DATN01\\Controllers\\LoginController.cs",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\DATN\\DemoShop\\DATN01\\Controllers\\LoginController.cs",
               "RelativeToolTip": "DATN01\\Controllers\\LoginController.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAgwBgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -60,13 +60,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "DocumentMoniker": "D:\\DATN\\DemoShop\\DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\DATN\\DemoShop\\DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "DATN01\\Areas\\Admin\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAuwLQAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAawEEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T22:31:17.701Z",
               "EditorCaption": ""
@@ -75,24 +75,24 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
+              "DocumentMoniker": "D:\\DATN\\DemoShop\\DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
               "RelativeDocumentMoniker": "DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
+              "ToolTip": "D:\\DATN\\DemoShop\\DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
               "RelativeToolTip": "DATN01\\Areas\\Admin\\Views\\AdminPage\\Index.cshtml",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAGwAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-14T22:30:13.172Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "DocumentMoniker": "D:\\DATN\\DemoShop\\DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
               "RelativeDocumentMoniker": "DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
-              "ToolTip": "D:\\DemoProject\\DemoShop\\DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
+              "ToolTip": "D:\\DATN\\DemoShop\\DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
               "RelativeToolTip": "DATN01\\Areas\\Admin\\Views\\Products\\Index.cshtml",
-              "ViewState": "AgIAAJoBAAAAAAAAAAAIwKQBAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHoAAAB4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-14T22:22:17.871Z",
               "EditorCaption": ""

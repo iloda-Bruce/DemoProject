@@ -27,7 +27,7 @@ namespace DATN01.Areas.Admin.Controllers
                 {
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = "select * from tblP01 join tblST01 on tblP01.PID = tblST01.PID";
+                    cmd.CommandText = "select * from tblP01 left join tblST01 on tblP01.PID = tblST01.PID";
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
                         DataTable dt = new DataTable();
@@ -75,7 +75,7 @@ namespace DATN01.Areas.Admin.Controllers
                 {
                     cmd.Connection = con;
                     cmd.CommandType = System.Data.CommandType.Text;
-                    cmd.CommandText = "select * from tblP01 join tblST01 on tblP01.PID = tblST01.PID where tblP01.PID='"+ PID + "'";
+                    cmd.CommandText = "select * from tblP01 left join tblST01 on tblP01.PID = tblST01.PID where tblP01.PID='"+ PID + "'";
                     using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                     {
                         DataTable dt = new DataTable();
@@ -181,6 +181,51 @@ namespace DATN01.Areas.Admin.Controllers
                         return Json(new { code = 401, message = "Xóa sản phẩm thất bại!" });
                     }
                     
+                }
+            }
+        }
+        [HttpPost]
+        public IActionResult AddProducts([FromBody] ProductModel _product)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    // $('#productCode').attr('data-product-id', data.pid);
+                    //$("#productCode").val(data.pCode);
+                    //$("#productName").val(data.pName);
+                    //$("#productGroup").val(data.pGroup);
+                    //$("#productClass").val(data.pClass);
+                    //$("#price").val(data.pSell);
+                    //$("#cost").val(data.pCapital);
+                    //$("#quantity").val(data.pReserves);
+                    //$("#weight").val(data.pWeight);
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandText = "spInsert_tblP01";
+                    //cmd.Parameters.AddWithValue("@PID", _product.PID);
+                    cmd.Parameters.AddWithValue("@PCode", _product.PCode);
+                    cmd.Parameters.AddWithValue("@PName", _product.PName);
+                    cmd.Parameters.AddWithValue("@PMark", _product.PMark);
+                    cmd.Parameters.AddWithValue("@PLimit", _product.PLimit);
+                    cmd.Parameters.AddWithValue("@PGroup", _product.PGroup);
+                    cmd.Parameters.AddWithValue("@PClass", _product.PClass);
+                    cmd.Parameters.AddWithValue("@PSell", _product.PSell);
+                    cmd.Parameters.AddWithValue("@PCapital", _product.PCapital);
+                    cmd.Parameters.AddWithValue("@PWeight", _product.PWeight);
+                    cmd.Parameters.AddWithValue("@Notes", _product.Notes);
+                    cmd.Parameters.AddWithValue("@isSell", _product.isSell);
+                    cmd.Parameters.AddWithValue("@isActive", _product.isActive);
+                    int res = cmd.ExecuteNonQuery();
+                    if (res > 0)
+                    {
+                        return Json(new { code = 200, message = "Success" });
+                    }
+                    else
+                    {
+                        return Json(new { code = 401, message = "Fail" });
+                    }
                 }
             }
         }
