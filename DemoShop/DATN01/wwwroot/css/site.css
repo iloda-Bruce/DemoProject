@@ -20,3 +20,14 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+@media (max-width: 991.98px) {
+    .left-section-Regist {
+        display: none;
+    }
+}
+.left-section-Regist{
+    background-image:url('../images/background-register1-1.jpg');
+    background-position:center;
+    background-size: cover;
+}

@@ -62,5 +62,8 @@ namespace DATN01.Controllers
                 }
             } 
         }
+        public IActionResult RegisterPage() {
+            return View();
+        }
     }
 }

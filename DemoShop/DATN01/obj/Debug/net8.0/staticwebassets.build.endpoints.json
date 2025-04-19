@@ -1151,7 +1151,7 @@
       ]
     },
     {
-      "Route": "css/site.c2tiyv64ts.css",
+      "Route": "css/site.bmreqox0sj.css",
       "AssetFile": "css/site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1165,7 +1165,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "613"
         },
         {
           "Name": "Content-Type",
@@ -1173,21 +1173,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"U029igzTf4NFtqvCqFbEUexLlieMGBLqIb8LzqnmYog=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 16 Apr 2025 16:18:49 GMT"
+          "Value": "Sat, 19 Apr 2025 07:47:25 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "bmreqox0sj"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-U029igzTf4NFtqvCqFbEUexLlieMGBLqIb8LzqnmYog="
         },
         {
           "Name": "label",
@@ -1210,7 +1210,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "613"
         },
         {
           "Name": "Content-Type",
@@ -1218,17 +1218,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"U029igzTf4NFtqvCqFbEUexLlieMGBLqIb8LzqnmYog=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 16 Apr 2025 16:18:49 GMT"
+          "Value": "Sat, 19 Apr 2025 07:47:25 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-U029igzTf4NFtqvCqFbEUexLlieMGBLqIb8LzqnmYog="
         }
       ]
     },
@@ -1557,6 +1557,88 @@
         {
           "Name": "label",
           "Value": "images/Thumb_CloudvsTraditional.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/background-register1-1.jpg",
+      "AssetFile": "images/background-register1-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "126364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NrRy20PBMvB9GVaTSCnD1IP01/Tkiu8XduiGJo0Ni+o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 07:21:02 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-NrRy20PBMvB9GVaTSCnD1IP01/Tkiu8XduiGJo0Ni+o="
+        }
+      ]
+    },
+    {
+      "Route": "images/background-register1-1.ueupew475o.jpg",
+      "AssetFile": "images/background-register1-1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "126364"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"NrRy20PBMvB9GVaTSCnD1IP01/Tkiu8XduiGJo0Ni+o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 18 Apr 2025 07:21:02 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ueupew475o"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-NrRy20PBMvB9GVaTSCnD1IP01/Tkiu8XduiGJo0Ni+o="
+        },
+        {
+          "Name": "label",
+          "Value": "images/background-register1-1.jpg"
         }
       ]
     },

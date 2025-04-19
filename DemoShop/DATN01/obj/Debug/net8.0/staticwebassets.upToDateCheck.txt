@@ -23,6 +23,7 @@ wwwroot\css\site.css
 wwwroot\css1\sb-admin-2.css
 wwwroot\css1\sb-admin-2.min.css
 wwwroot\favicon.ico
+wwwroot\images\background-register1-1.jpg
 wwwroot\images\kgh1684404273.png
 wwwroot\images\Thumb_CloudvsTraditional.jpg
 wwwroot\images\unnamed-1.png
