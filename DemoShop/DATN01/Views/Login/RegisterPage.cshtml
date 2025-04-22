@@ -26,14 +26,19 @@
                     </p>
                 </div>
             </div>
-            <div class="col-6 m-0 p-0" style="height:100vh;">
+            <div class="col-6 m-0 p-0 d-flex justify-content-center align-items-center" style="height:100vh;">
                 <div class="col-10 d-flex flex-column">
                     <h3>Tạo tài khoản dùng thử miễn phí</h3>
                     <form>
                         <div class="form-group">
-                            <label for="name">Nhập họ và tên</label>
+                            <label for="name">Họ và tên</label>
                             <input type="text" class="form-control" id="name" placeholder="Nhập đầy đủ họ và tên">
                         </div>
+                        <div class="form-group">
+                            <label for="name">Địa chỉ</label>
+                            <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ">
+                        </div>
+                        
                         <div class="form-group">
                             <label for="phone">Số điện thoại</label>
                             <div class="input-group">
@@ -43,18 +48,139 @@
                                 <input type="tel" class="form-control" id="phone" placeholder="0123 456 789">
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="name">Ngày tháng năm sinh</label>
+                            <input type="date" class="form-control" id="dob" placeholder="Nhập ngày tháng năm sinh">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Tài khoản</label>
+                            <input type="text" class="form-control" id="AName" placeholder="Nhập tài khoản">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Mật khẩu</label>
+                            <input type="password" class="form-control" id="APass" placeholder="Nhập mật khẩu">
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Nhập lại mật khẩu</label>
+                            <input type="password" class="form-control" id="confPass" placeholder="Nhập mật khẩu">
+                        </div>
                     </form>
-                    <button type="submit" class="btn btn-primary btn-block">Tiếp tục</button>
+                    <button type="submit" class="btn btn-primary btn-block" id="btnSub">Đăng kí</button>
                 </div>
             </div>
         </div>
     </div>
 
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="~/vendor/jquery/jquery.min.js"></script>
     <script>
-        
+        function checkConfirmAcc(){
+            let APass = $("#APass").val();
+            let ConfPass = $("#confPass").val();
+            
+            if(APass == ConfPass){
+                return true;
+            }else{
+                return false;
+            }
+        } 
+        $("#btnSub").click(function(){
+            let urlCheckAccount = '@Url.Action("CheckAccount", "Login", null)';
+            let CreateAccount = '@Url.Action("CreateAccount", "Login", null)';
+            let Employee = {
+                EID:0,
+                EName:$("#name").val(),
+                EAddress:$("#address").val(),
+                EPhone:$("#phone").val(),
+                EDOB:$("#dob").val()
+            }
+
+            let Account = {
+                AID:0,
+                AName:$("#AName").val(),
+                APass:$("#APass").val(),
+                EID:0,
+                CID:0,
+                ARole:'admin'
+            }
+            let dataToSend = {
+                Employee: Employee,
+                Account: Account
+            }
+            let checkPass = checkConfirmAcc();
+            if(checkPass){
+                let isOk = false;
+                let _AName = $("#AName").val();
+                console.log(_AName)
+                $.ajax({
+                    url: urlCheckAccount,
+                    type: 'POST',
+                    //contentType: 'application/json', // Chỉ định kiểu dữ liệu gửi đi là JSON
+                    data: {AName: _AName}, // Gửi trực tiếp chuỗi JSON
+                    success: function(response) {
+                       
+                    },
+                    error: function(error) {
+                    console.error('Lỗi AJAX:', error);
+                    } 
+                })
+                .then(function(data) {
+                    // Được gọi khi AJAX request thành công
+                    console.log('Dữ liệu nhận được:', data);
+                    if(data.code == 200){
+                        alert("Tài khoản này đã tồn tại! Hãy đặt lại tên tài khoản khác!")
+                        $("#AName").focus();
+                        isOk = false;
+                        return;
+                    }else{
+                        if(data.code == 201){
+                            //console.log(Employee)
+                            //console.log(Account)
+                            console.log(dataToSend)
+                            $.ajax({
+                                url: CreateAccount,
+                                type: 'POST',
+                                contentType: 'application/json',
+                                data: JSON.stringify(dataToSend),
+                                dataType: "json",
+                                success: function(data){
+                                    if(data.code == 200){
+                                        alert("Tạo tài khoản thành công!");
+                                    }else{
+                                        if(data.code == 400){
+                                            alert("Tạo người dùng thất bại!");
+                                        }else{
+                                            if(data.code == 401){
+                                                alert("Tạo tài khoản thất bại!");
+                                            }else{
+                                                alert("Lỗi Ajax");
+                                            }
+                                        }
+                                    }
+                                },
+                                error:function(data){
+
+                                }
+                            });
+                        }
+                    }
+                })
+                .catch(function(error) {
+                  // Được gọi khi AJAX request thất bại
+                  console.error('Lỗi AJAX:', error);
+                })
+                .finally(function() {
+                  // Được gọi sau khi request hoàn thành, bất kể thành công hay thất bại
+                  console.log('Hoàn thành request!');
+                });
+            }else{
+                alert("Mật khẩu xác nhận không trùng khớp với mật khẩu khởi tạo");
+                $("#APass").focus();
+            }
+        })
     </script>
 </body>
 </html>

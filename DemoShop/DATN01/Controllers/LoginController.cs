@@ -1,4 +1,5 @@
-﻿using DATN01.Models;
+﻿using DATN01.Areas.Admin.Models;
+using DATN01.Models;
 using DATN01.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using System.Data;
 using System.Text.Json.Serialization;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace DATN01.Controllers
 {
@@ -64,6 +66,95 @@ namespace DATN01.Controllers
         }
         public IActionResult RegisterPage() {
             return View();
+        }
+        [HttpPost]
+        public IActionResult CheckAccount(string AName)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandText = "select * from tblA01 where AName ='" + AName + "'";
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        if (dt.Rows.Count > 0)
+                        {
+                            return new JsonResult(new { code = 200, message = "Existed Account"});
+                        }
+                        else
+                        {
+                            return new JsonResult(new { code = 201, message = "UnAvailable Account" });
+                        }
+                    }
+                }
+            }
+        }
+        [HttpPost]
+        public IActionResult CreateAccount([FromBody] RegisterModel registerModel) 
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Connection = con;
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandText = "sp_createEmployee";
+                    cmd.Parameters.AddWithValue("@EName", registerModel.Employee.EName);
+                    cmd.Parameters.AddWithValue("@EAddress", registerModel.Employee.EAddress);
+                    cmd.Parameters.AddWithValue("@EPhone", registerModel.Employee.EPhone);
+                    cmd.Parameters.AddWithValue("@EDOB", registerModel.Employee.EDOB);
+                    int res = cmd.ExecuteNonQuery();
+                    if (res > 0)
+                    {
+                        using (SqlCommand cmd1 = new SqlCommand())
+                        {
+                            cmd1.Connection = con;
+                            cmd1.CommandType = CommandType.Text;
+                            cmd1.CommandText = "select * from tblE01 where EID = (select max(EID) from tblE01)";
+                            
+                            using (SqlDataReader reader = cmd1.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    registerModel.Account.EID = int.Parse(String.IsNullOrEmpty(reader[0].ToString())? "0": reader[0].ToString());
+                                }
+                            }
+                        }
+                        using (SqlCommand cmd2 = new SqlCommand())
+                        {
+                            cmd2.Connection = con;
+                            cmd2.CommandType = CommandType.StoredProcedure;
+                            cmd2.CommandText = "sp_createAccount";
+                            cmd2.Parameters.AddWithValue("@AName", registerModel.Account.AName);
+                            cmd2.Parameters.AddWithValue("@APass", registerModel.Account.APass);
+                            cmd2.Parameters.AddWithValue("@EID", registerModel.Account.EID);
+                            cmd2.Parameters.AddWithValue("@CID", registerModel.Account.CID);
+                            cmd2.Parameters.AddWithValue("@ARole", registerModel.Account.ARole);
+                            int res1 = cmd2.ExecuteNonQuery();
+                            if(res1 > 0)
+                            {
+                                return Json(new { code = 200, message = "Tạo tài khoản thành công" });
+                            }
+                            else
+                            {
+                                return Json(new { code = 401, message = "Tạo tài khoản thất bại" });
+                            }
+                            
+                        }
+                    }
+                    else
+                    {
+                        return Json(new { code = 400, message = "Tạo người dùng thất bại" });
+                    }
+                }
+            }
+            //return View();
         }
     }
 }
