@@ -1,0 +1,482 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container-fluid">
+    <div class="row">
+        <!--<div class="col-md-3 p-3">
+            <h5 class="font-weight-bold">Hàng hóa</h5>
+            <div class="col-12 card">
+                <div class="mt-3 card-body">
+                    <h6>Loại hàng</h6>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="hangHoa">
+                        <label class="form-check-label" for="hangHoa">Hàng hóa</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dichVu">
+                        <label class="form-check-label" for="dichVu">Dịch vụ</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="comboDongGoi">
+                        <label class="form-check-label" for="comboDongGoi">Combo - đóng gói</label>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-12 card">
+                <div class="mt-3 card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6>Nhóm hàng</h6>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="input-group mt-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Tìm kiếm nhóm hàng">
+                    </div>
+                    <div class="mt-2">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="tatCa" checked>
+                            <label class="form-check-label" for="tatCa">Tất cả</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="banChai">
+                            <label class="form-check-label" for="banChai">Bàn chải</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="banhBao">
+                            <label class="form-check-label" for="banhBao">Bánh bao</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="giaVi">
+                            <label class="form-check-label" for="giaVi">Gia vị</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="banhDauXanh">
+                            <label class="form-check-label" for="banhDauXanh">Bánh đậu xanh</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="nhomHang" id="bangVeSinh">
+                            <label class="form-check-label" for="bangVeSinh">Băng vệ sinh</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 card">
+                <div class="mt-3 card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6>Lọc theo tiêu điểm</h6>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle"><i class="fas fa-caret-up"></i></button>
+                    </div>
+                    <div class="mt-2">
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="tieuDiem" id="tatCaTieuDiem" checked>
+                            <label class="form-check-label" for="tatCaTieuDiem">Tất cả</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="tieuDiem" id="tichDiem">
+                            <label class="form-check-label" for="tichDiem">Tích điểm</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="tieuDiem" id="khongTichDiem">
+                            <label class="form-check-label" for="khongTichDiem">Không tích điểm</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 card">
+                <div class="mt-3 card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6>Thuộc tính</h6>
+                        <button class="btn btn-sm btn-outline-secondary rounded-circle"><i class="fas fa-caret-up"></i></button>
+                    </div>
+                    <div class="mt-2">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="thung">
+                            <label class="form-check-label" for="thung">THÙNG</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="moRong">
+                            <label class="form-check-label" for="moRong">Mở rộng</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+        <div class="col-md-12 p-3 card">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Theo mã, tên hàng,...">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+
+                    <button class="btn btn-success mr-2" id="btnAdd" data-toggle="modal" data-target="#exampleModalLong"><i class="fas fa-plus"></i> Thêm mới</button>
+                    <button class="btn btn-info mr-2"><i class="fas fa-upload"></i> Import</button>
+                    <button class="btn btn-warning mr-2"><i class="fas fa-download"></i> Xuất file</button>
+                    <button class="btn btn-light border mr-2"><i class="fas fa-cog"></i></button>
+                    <button class="btn btn-light border"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col"><input type="checkbox"></th>
+                            <th scope="col"><i class="far fa-star"></i></th>
+                            <th scope="col">Họ tên NV </th>
+                            <th scope="col">Địa chỉ NV</th>
+                            <th scope="col">Số điện thoại</th>
+                            <th scope="col">Năm sinh</th>
+                            <th scope="col">Phân quyền</th>
+                            <th scope="col">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resData">
+                       
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row mt-3 align-items-center">
+                <div class="col-md-6">
+                    <nav aria-label="Product pagination">
+                        <ul class="pagination pagination-sm">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <p class="text-muted">Hiển thị 1 - 10 / Tổng số 3681 hàng bao gồm 3765 Mã hàng</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Cập nhật sản phẩm</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <!--<div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="productCode">Mã sản phẩm</label>
+                                <input type="text" class="form-control" id="productCode" data-product-id="0" placeholder="Nhập mã sản phẩm">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="productName">Tên sản phẩm</label>
+                                <input type="text" class="form-control" id="productName" placeholder="Nhập tên sản phẩm">
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-flex justify-content-around align-items-center">
+                            <div class="d-flex align-items-baseline">
+                                <input type="checkbox" class="p-1" id="isActive">
+                                <label for="productName">Kích hoạt</label>
+                            </div>
+                            <div class="d-flex align-items-baseline">
+                                <input type="checkbox" class="p-1" id="isSell">
+                                <label for="productName">Kinh doanh</label>
+                            </div>
+                        </div>
+                    </div>-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="productName">Tên nhân viên</label>
+                                <input type="text" class="form-control" id="CName" placeholder="Nhập tên nhân viên">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="category">Địa chỉ nhân viên</label>
+                                <input type="text" class="form-control" id="CAddress" placeholder="Nhập địa chỉ nhân viên">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="price">Số điện thoại</label>
+                                <input type="tel" class="form-control" id="CPhone" placeholder="Nhập số điện thoại">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="cost">Năm sinh</label>
+                                <input type="date" class="form-control" id="CDOB" placeholder="Nhập ngày tháng năm sinh">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="quantity">Tài khoản</label>
+                                <input type="text" class="form-control" id="AName" placeholder="Nhập tài khoản">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="sku">Mật khẩu</label>
+                                <input type="password" class="form-control" id="APass" placeholder="Nhập mật khẩu tài khoản">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="supplier">Xác nhận mật khẩu</label>
+                                <input type="password" class="form-control" id="confirmPass" placeholder="Nhập lại mật khẩu tài khoản" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btnSave">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        var isAddEmp = false;
+        $(document).ready(function() {
+             let url = '@Url.Action("GetCustomers", "Employee", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+             console.log(url)
+             $.ajax({
+                 url: url,
+                 type: "Get", // Hoặc "POST" tùy thuộc vào action của bạn
+                 dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                 success: function(data) {
+                     console.log("Dữ liệu nhận được khi tải trang:", data);
+                     console.log("ok2")
+                     let d = new Date();
+                     let tbody = $('#resData');
+                     $.each(data, function(index, item) {
+                    //                  public int CID {  get; set; }
+                    // public string CName {  get; set; }
+                    // public string CAddress {  get; set; }
+                    // public string CPhone {  get; set; }
+                    // public DateTime CDOB { get; set; }
+                    // public int AID { get; set; }
+                    // public string AName {  get; set; }
+                    // public string APass {  get; set; }
+                    // public int EID {  get; set; }
+                    // public string ARole {  get; set; }
+                      let newRow = '<tr id="'+item.cid+'">'
+                                    +'<th scope="row"><input type="checkbox"></th>'
+                                    +'<td><i class="far fa-star"></i></td>'
+                                    +'<td>'+item.cName+'</td>'
+                                    +'<td>'+item.cAddress+'</td>'
+                                    +'<td>'+item.cPhone+'</td>'
+                                    +'<td>'+item.cdob.split('T')[0]+'</td>'
+                                    +'<td>'+item.aRole+'</td>'
+                                    +'<td><button type="button" class="btn btn-primary btnChange" data-toggle="modal" data-target="#exampleModalLong"><i class="fa-solid fa-pen"></i></button> <button type="button" class="btn btn-danger btnDel"><i class="fa-solid fa-trash"></i></button></td>';
+                      tbody.append(newRow); // Thêm hàng mới vào <tbody>
+                    });
+                 },
+                 error: function(xhr, status, error) {
+                     console.error("Lỗi AJAX khi tải trang:", error);
+
+                 }
+             });
+        });
+
+        $('#resData').on('click', '.btnChange', function() {
+            let url = '@Url.Action("GetEmployee", "Employee", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+             console.log(url)
+             //let idBtn = $(this).attr('id')
+             let parentRow = $(this).closest("tr");
+             let idBtn = parentRow.attr('id')
+             console.log(idBtn)
+             $.ajax({
+                 url: url,
+                 type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
+                 data: { CID: idBtn },
+                 dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                 success: function(data) {
+                    // public int CID {  get; set; }
+                    // public string CName {  get; set; }
+                    // public string CAddress {  get; set; }
+                    // public string CPhone {  get; set; }
+                    // public DateTime CDOB { get; set; }
+                    // public int AID { get; set; }
+                    // public string AName {  get; set; }
+                    // public string APass {  get; set; }
+                    // public int EID {  get; set; }
+                    // public string ARole {  get; set; }
+                     console.log(data)
+                    $('#CName').attr('data-emp-id',data.cid);
+                    $('#CName').val(data.cName);
+                    $("#CAddress").val(data.cAddress);
+                    $("#CPhone").val(data.cPhone);
+                    $("#CDOB").val(data.cdob.split('T')[0]);
+                    $('#AName').attr('data-acc-id',data.aid);
+                    $("#AName").val(data.aName);
+                    $("#APass").val(data.aPass);
+                  
+                    //$("#productCode").val(data.pid);
+                 },
+                 error: function(xhr, status, error) {
+                     console.error("Lỗi AJAX khi tải trang:", error);
+                 }
+             });
+        });
+
+        $('#btnSave').click(function(){
+             if(isAddPro){
+                 // let url = '@Url.Action("AddProducts", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+                 // console.log(url)
+                 // let _product ={
+                 // //       PID int identity(1,1) primary key,
+                 // //   PGroup nvarchar(50) null,
+                 //    //PClass nvarchar(50) null,
+                 //    //PMark nvarchar(50) null,
+                 //    //PCode nvarchar(50) null,
+                 //    //PName nvarchar(50) null,
+                 //    //PLimit int null,
+                 //    //PCapital float null,
+                 //    //PSell float null,
+                 //    //PWeight float null,
+                 //    //Notes nvarchar(200) null,
+                 //    //isSell bit null,
+                 // //   isActive bit null
+                 //    "PID" : 0,
+                 //    "PGroup":  $("#productGroup").val(),
+                 //    "PClass":  $("#productClass").val(),
+                 //    "PMark":  $("#mark").val(),
+                 //    "PCode":  $("#productCode").val(),
+                 //    "PName":  $("#productName").val(),
+                 //    "PLimit":  $("#limit").val(),
+                 //    "PCapital":  $("#cost").val(),
+                 //    "PSell":  $("#price").val(),
+                 //    "PWeight":  $("#weight").val(),
+                 //    "Notes":  $("#note").val(),
+                 //    "isSell":  $("#isSell").is(':checked'),
+                 //    "isActive":  $("#isActive").is(':checked'),
+                 // }
+                 // console.log(_product)
+                 // $.ajax({
+                 //     url: url,
+                 //     type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
+                 //     data: JSON.stringify(_product),
+                 //     dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                 //     contentType: 'application/json',
+                 //     success: function(data) {
+                 //        console.error(data.code);
+                 //        if(data.code === 200){
+                 //            alert("Thêm sản phẩm thành công!");
+                 //            $('#exampleModalLong').modal('hide');
+                 //            if(isAddPro){
+                 //                isAddPro = false
+                 //            }else{
+
+                 //            }
+                 //            location.reload();
+                 //        }else{
+                 //            alert("Thêm sản phẩm thất bại!");
+                 //        }
+                 //     },
+                 //     error: function(xhr, status, error) {
+                 //         console.error("Lỗi AJAX ", error);
+
+                 //     }
+                 // });
+             }else{
+                 let url = '@Url.Action("UpdateProduct", "Products", new { area = "Admin" })'; // Thay "Home" bằng tên controller thực tế nếu cần
+                 console.log(url)
+                 let _employee ={
+                 //       PID int identity(1,1) primary key,
+                 //   PGroup nvarchar(50) null,
+                    //PClass nvarchar(50) null,
+                    //PMark nvarchar(50) null,
+                    //PCode nvarchar(50) null,
+                    //PName nvarchar(50) null,
+                    //PLimit int null,
+                    //PCapital float null,
+                    //PSell float null,
+                    //PWeight float null,
+                    //Notes nvarchar(200) null,
+                    //isSell bit null,
+                 //   isActive bit null
+                    "PID" :  $('#productCode').attr('data-product-id'),
+                    "PGroup":  $("#productGroup").val(),
+                    "PClass":  $("#productClass").val(),
+                    "PMark":  $("#mark").val(),
+                    "PCode":  $("#productCode").val(),
+                    "PName":  $("#productName").val(),
+                    "PLimit":  $("#limit").val(),
+                    "PCapital":  $("#cost").val(),
+                    "PSell":  $("#price").val(),
+                    "PWeight":  $("#weight").val(),
+                    "Notes":  $("#note").val(),
+                    "isSell":  $("#isSell").is(':checked'),
+                    "isActive":  $("#isActive").is(':checked'),
+                 }
+                 console.log(_product)
+                 $.ajax({
+                     url: url,
+                     type: "POST", // Hoặc "POST" tùy thuộc vào action của bạn
+                     data: JSON.stringify(_product),
+                     dataType: "json", // Hoặc kiểu dữ liệu bạn mong đợi
+                     contentType: 'application/json',
+                     success: function(data) {
+                        console.error(data.code);
+                        if(data.code === 200){
+                            alert("Cập nhật sản phẩm thành công!");
+                            $('#exampleModalLong').modal('hide');
+                            if(isAddPro){
+                                isAddPro = false
+                            }else{
+
+                            }
+                            location.reload();
+                        }else{
+                            alert("Cập nhật sản phẩm thất bại!");
+                        }
+                     },
+                     error: function(xhr, status, error) {
+                         console.error("Lỗi AJAX ", error);
+
+                     }
+                 });
+             }
+         });
+    </script>
+}

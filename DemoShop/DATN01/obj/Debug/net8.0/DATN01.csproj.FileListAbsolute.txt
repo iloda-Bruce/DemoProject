@@ -578,3 +578,4 @@ D:\DATN\DemoShop\DATN01\obj\Debug\net8.0\refint\DATN01.dll
 D:\DATN\DemoShop\DATN01\obj\Debug\net8.0\DATN01.pdb
 D:\DATN\DemoShop\DATN01\obj\Debug\net8.0\DATN01.genruntimeconfig.cache
 D:\DATN\DemoShop\DATN01\obj\Debug\net8.0\ref\DATN01.dll
+D:\DATN\DemoShop\DATN01\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll

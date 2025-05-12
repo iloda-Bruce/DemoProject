@@ -1,3 +1,4 @@
+using DATN01.Areas.Repository;
 using DATN01.Data;
 using DATN01.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -16,11 +17,11 @@ builder.Services.AddSession(options =>
 });
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddDbContext<DbContext>(options => options.UseSqlServer(
-        builder.Configuration.GetConnectionString("")
+        builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 //builder.Services.AddScoped<SessionFilter>();
 builder.Services.AddSingleton<ILogin, LoginAction>();
-
+builder.Services.AddSingleton<IProductServices, ProductService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -150,7 +150,7 @@
             success: function(result){
                 console.log("success",result.res);
                  if(result.res.eid == 0){
-                    var adminHomeUrl = '@Url.Action("Index", "AdminPage", new { area = "Admin" })';
+                    var adminHomeUrl = '@Url.Action("Index", "Home", null)';
                     window.location.href = adminHomeUrl;
                 }else{
                     alert("Không thể truy cập trang quản lý bằng tài khoản Manager");

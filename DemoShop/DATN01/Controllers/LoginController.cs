@@ -134,7 +134,10 @@ namespace DATN01.Controllers
                             cmd2.Parameters.AddWithValue("@AName", registerModel.Account.AName);
                             cmd2.Parameters.AddWithValue("@APass", registerModel.Account.APass);
                             cmd2.Parameters.AddWithValue("@EID", registerModel.Account.EID);
-                            cmd2.Parameters.AddWithValue("@CID", registerModel.Account.CID);
+                            //cmd2.Parameters.AddWithValue("@CID", null);
+                            SqlParameter cidParam = new SqlParameter("@CID", SqlDbType.Int); // Hoặc kiểu dữ liệu phù hợp của @CID
+                            cidParam.Value = DBNull.Value;
+                            cmd2.Parameters.Add(cidParam);
                             cmd2.Parameters.AddWithValue("@ARole", registerModel.Account.ARole);
                             int res1 = cmd2.ExecuteNonQuery();
                             if(res1 > 0)

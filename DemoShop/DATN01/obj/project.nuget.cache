@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tijRM6+LULQ=",
+  "dgSpecHash": "MlN06c07xDQ=",
   "success": true,
   "projectFilePath": "D:\\DATN\\DemoShop\\DATN01\\DATN01.csproj",
   "expectedPackageFiles": [
@@ -96,6 +96,7 @@
     "C:\\Users\\nam59\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.4\\microsoft.entityframeworkcore.sqlserver.9.0.4.nupkg.sha512",
     "C:\\Users\\nam59\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.4\\microsoft.extensions.caching.abstractions.9.0.4.nupkg.sha512",
     "C:\\Users\\nam59\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.4\\microsoft.extensions.caching.memory.9.0.4.nupkg.sha512",
+    "C:\\Users\\nam59\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.4\\microsoft.extensions.configuration.9.0.4.nupkg.sha512",
     "C:\\Users\\nam59\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.4\\microsoft.extensions.configuration.abstractions.9.0.4.nupkg.sha512",
     "C:\\Users\\nam59\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.4\\microsoft.extensions.dependencyinjection.9.0.4.nupkg.sha512",
     "C:\\Users\\nam59\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.4\\microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512",

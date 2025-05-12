@@ -483,7 +483,12 @@
          });
          $(document).ready(function() {
             $('#exampleModalLong').on('hidden.bs.modal', function (e) {
-            $('#exampleModalLong form')[0].reset();
+                $('#exampleModalLong form')[0].reset();
+                if(isAddPro){
+                }
+                else{
+                     isAddPro = true;
+                }
             });
          });
          $('#resData').on('click', '.btnDel', function() {
